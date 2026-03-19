@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import app from './app'
-=======
 import 'dotenv/config'
 import { Elysia, t } from 'elysia'
 import { PrismaPg } from '@prisma/adapter-pg'
@@ -110,25 +107,14 @@ const app = new Elysia()
         response: t.Object({ message: t.String() })
         }
     )
->>>>>>> parent of 004c696 (fix vercel deploy 2)
 
     // For Vercel: export as default
     export default app
 
 
 if (import.meta.main) {
-<<<<<<< HEAD
-  app.listen(8000)
-  console.log(
-    `Elysia is running at ${process.env.HOSTNAME || 'localhost'}:${app.server?.port}`
-  )
-}
-
-export default app
-=======
     app.listen(8000)
     console.log(
         `🦊 Elysia is running at ${process.env.HOSTNAME || 'localhost'}:${app.server?.port}`
     )
 }
->>>>>>> parent of 004c696 (fix vercel deploy 2)

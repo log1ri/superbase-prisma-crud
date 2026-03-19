@@ -2,10 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "bunVersion": "1.x",
   "buildCommand": "bunx prisma generate",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "@vercel/node"
-    }
-  },
   "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
 }
