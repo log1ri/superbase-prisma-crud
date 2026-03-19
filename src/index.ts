@@ -8,6 +8,7 @@ import {
     ProductPlainInputCreate,
     ProductPlainInputUpdate,
 } from '../generated/prismabox/Product'
+import { swagger } from '@elysiajs/swagger'
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
 const prisma = new PrismaClient({ adapter });
@@ -21,6 +22,7 @@ const toResponse = (product: { id: string; name: string; detail: string; price: 
 })
 
 const app = new Elysia()
+    .use(swagger())
 
 	.get('/', () => 'Hello Elysia')
 
