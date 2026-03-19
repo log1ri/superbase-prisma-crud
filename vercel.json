@@ -1,5 +1,5 @@
 {
-  "buildCommand": "bunx prisma generate",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "bunVersion": "1.x",
-  "rewrites": [{ "source": "/(.*)", "destination": "/src" }]
+  "buildCommand": "bunx prisma generate"
 }
