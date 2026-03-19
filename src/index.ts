@@ -21,7 +21,7 @@ const toResponse = (product: { id: string; name: string; detail: string; price: 
   price: product.price?.toNumber() ?? null
 })
 
-const app = new Elysia()
+export default new Elysia()
     .use(swagger())
 
 	.get('/', () => 'Hello Elysia')
@@ -109,12 +109,11 @@ const app = new Elysia()
     )
 
     // For Vercel: export as default
-    export default app
 
 
-if (import.meta.main) {
-    app.listen(8000)
-    console.log(
-        `🦊 Elysia is running at ${process.env.HOSTNAME || 'localhost'}:${app.server?.port}`
-    )
-}
+// if (import.meta.main) {
+//     .listen(8000)
+//     console.log(
+//         `🦊 Elysia is running at ${process.env.HOSTNAME || 'localhost'}:${app.server?.port}`
+//     )
+// }
