@@ -112,7 +112,7 @@ const app = new Elysia()
     export default app
 
 
-if (import.meta.main || process.env.NODE_ENV !== 'production') {
+if (import.meta.main) {
     app.listen(8000)
     console.log(
         `🦊 Elysia is running at ${process.env.HOSTNAME || 'localhost'}:${app.server?.port}`
